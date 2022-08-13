@@ -20,8 +20,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class PostController {
 
-    private final FiveService fiveService;
-
     @Operation(description = "생성요청")
     @PostMapping("/person")
     public ResponseEntity<Person> requestBodyExample(@Parameter(description = "생성요청") @RequestBody Person person) {

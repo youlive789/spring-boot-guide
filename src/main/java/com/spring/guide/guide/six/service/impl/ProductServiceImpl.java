@@ -12,7 +12,6 @@ import com.spring.guide.guide.six.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
@@ -27,9 +26,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductResponse createProduct(ProductDto product) {
-        log.info("ProductDto : {}", product);
         Product entity = modelMapper.map(product, Product.class);
-        log.info("entity : {}", entity);
         return modelMapper.map(productDao.insertProduct(entity), ProductResponse.class);
     }
 

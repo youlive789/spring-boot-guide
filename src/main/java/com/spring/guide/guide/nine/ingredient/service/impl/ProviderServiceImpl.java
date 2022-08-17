@@ -9,9 +9,7 @@ import com.spring.guide.guide.nine.ingredient.data.repository.ProviderRepository
 import com.spring.guide.guide.nine.ingredient.service.ProviderService;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ProviderServiceImpl implements ProviderService {
@@ -28,8 +26,9 @@ public class ProviderServiceImpl implements ProviderService {
 
     @Override
     public ProviderDto updateProvider(ProviderDto providerDto) {
-        // TODO Auto-generated method stub
-        return null;
+        Provider provider = modelMapper.map(providerDto, Provider.class);
+        Provider saved = providerRepository.save(provider);
+        return modelMapper.map(saved, ProviderDto.class);
     }
 
     @Override

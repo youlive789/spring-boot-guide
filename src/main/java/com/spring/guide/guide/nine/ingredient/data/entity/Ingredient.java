@@ -13,20 +13,21 @@ import javax.persistence.ManyToOne;
 import com.spring.guide.guide.nine.core.BaseEntity;
 import com.spring.guide.guide.nine.ingredient.data.type.IngredientType;
 
-import lombok.AllArgsConstructor;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+@SuperBuilder
+@NoArgsConstructor
 public class Ingredient extends BaseEntity {
     
     @Id

@@ -1,7 +1,5 @@
 package com.spring.guide.guide.six;
 
-import static org.mockito.ArgumentMatchers.any;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.mockito.BDDMockito.given;

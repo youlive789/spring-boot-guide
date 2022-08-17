@@ -10,7 +10,6 @@ import com.spring.guide.guide.six.data.entity.Product;
 import com.spring.guide.guide.six.service.ProductService;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor

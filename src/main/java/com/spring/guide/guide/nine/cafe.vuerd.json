@@ -1,0 +1,672 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -262.3333333333333,
+    "scrollLeft": -294.3333333333333,
+    "zoomLevel": 0.8,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "카페",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "BEVERAGE",
+        "comment": "음료",
+        "columns": [
+          {
+            "name": "BEVERAGE_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 81.7900390625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "543c94fa-7f02-421c-bf40-e4936a76a13a"
+          },
+          {
+            "name": "NAME",
+            "comment": "음료이름",
+            "dataType": "VARCHAR(30)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 82.1328125,
+              "widthDefault": 60
+            },
+            "id": "b5ccd92c-0581-445b-aae3-6fe48672df43"
+          },
+          {
+            "name": "PRICE",
+            "comment": "가격",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9ae678c7-34da-4e57-a4a3-c212ac4b6c97"
+          },
+          {
+            "name": "TYPE",
+            "comment": "음료타입",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 82.1328125,
+              "widthDefault": 60
+            },
+            "id": "ad8d0e89-98f2-4f53-9b60-b4499b18b497"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 208,
+          "top": 108,
+          "zIndex": 281,
+          "widthName": 63.419921875,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "338e9fc9-1159-4984-ad8e-a186cf51bbde"
+      },
+      {
+        "name": "INGREDIENT",
+        "comment": "재료",
+        "columns": [
+          {
+            "name": "INGREDIENT_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 94.041015625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2acc3490-307a-4c14-9b5a-bf0ab56e0995"
+          },
+          {
+            "name": "NAME",
+            "comment": "재료이름",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 82.1328125,
+              "widthDefault": 60
+            },
+            "id": "f08d2219-bd5c-4f30-a1e9-28b356a5111b"
+          },
+          {
+            "name": "TYPE",
+            "comment": "재료타입",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 82.1328125,
+              "widthDefault": 60
+            },
+            "id": "324b25e9-5a7d-4c88-91dc-5279158e6cbb"
+          },
+          {
+            "name": "PRICE_PER_GRAM",
+            "comment": "그램당 가격",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 106.50146484375,
+              "widthComment": 71.5703125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "719fd2f1-d305-4346-9212-39b8b3fc4109"
+          },
+          {
+            "name": "PROVIDER_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 81.36474609375,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b0e41bf8-8503-4a35-b4d3-f16e220d30cd"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 187.4999,
+          "top": 608.0001,
+          "zIndex": 238,
+          "widthName": 75.6708984375,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "3989acfa-69d0-4933-872b-075dafc31f17"
+      },
+      {
+        "name": "BEVERAGE_INGREDIENT",
+        "comment": "음료/재료 매핑",
+        "columns": [
+          {
+            "name": "BEVERAGE_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 81.7900390625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d8d6291c-ca7c-42ab-b8a9-0a494a54eda7"
+          },
+          {
+            "name": "INGREDIENT_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 94.041015625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a452aa31-664e-4048-a135-267699762c40"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 212.9167,
+          "top": 373.1667,
+          "zIndex": 304,
+          "widthName": 142.6259765625,
+          "widthComment": 89.71826171875
+        },
+        "visible": true,
+        "id": "f61da7a9-2812-4258-b7ca-bf51a2fa6930"
+      },
+      {
+        "name": "PROVIDER",
+        "comment": "재료공급자",
+        "columns": [
+          {
+            "name": "PROVIDER_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 81.36474609375,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "759b1cfc-d036-4e5c-b92a-1b60a148b419"
+          },
+          {
+            "name": "NAME",
+            "comment": "이름",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 82.1328125,
+              "widthDefault": 60
+            },
+            "id": "d73b792f-f446-4f81-937a-681918244589"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 757.5,
+          "top": 637.25,
+          "zIndex": 302,
+          "widthName": 62.99462890625,
+          "widthComment": 67
+        },
+        "visible": true,
+        "id": "4ad2bc97-6e54-459a-8f81-14ed2b2db58a"
+      },
+      {
+        "name": "ORDERED",
+        "comment": "주문",
+        "columns": [
+          {
+            "name": "ORDER_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.328125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e744ce6f-8a52-4c7a-86c5-6c81ca737d8b"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1238.75,
+          "top": 142.25,
+          "zIndex": 300,
+          "widthName": 60.0048828125,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "d609f126-9293-434b-be27-fa9a372ef8ef"
+      },
+      {
+        "name": "BEVERAGE_ORDER",
+        "comment": "주문/음료 매핑",
+        "columns": [
+          {
+            "name": "BEVERAGE_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 81.7900390625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "90608fdb-4087-46b8-9f27-2d292332df9b"
+          },
+          {
+            "name": "ORDER_ID",
+            "comment": "일련번호",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 62.328125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c74976cf-f545-469d-b704-861f6439dd82"
+          },
+          {
+            "name": "AMOUNT",
+            "comment": "주문수량",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "161b8916-11be-4ea4-9d9e-598d1df8d303"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 734.25,
+          "top": 120.75,
+          "zIndex": 299,
+          "widthName": 110.9130859375,
+          "widthComment": 89.71826171875
+        },
+        "visible": true,
+        "id": "f7e6ada2-2f1b-40a3-bd4c-14d5f4f1be06"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "338e9fc9-1159-4984-ad8e-a186cf51bbde",
+          "columnIds": [
+            "543c94fa-7f02-421c-bf40-e4936a76a13a"
+          ],
+          "x": 403.46142578125,
+          "y": 259,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "f61da7a9-2812-4258-b7ca-bf51a2fa6930",
+          "columnIds": [
+            "d8d6291c-ca7c-42ab-b8a9-0a494a54eda7"
+          ],
+          "x": 403.4372078125,
+          "y": 373.1667,
+          "direction": "top"
+        },
+        "constraintName": "fk_beverage_to_beverage_ingredient",
+        "visible": true,
+        "id": "42b36aa5-ae13-43ba-8d34-3f9ee9db6c5a"
+      },
+      {
+        "identification": false,
+        "relationshipType": "ZeroN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "3989acfa-69d0-4933-872b-075dafc31f17",
+          "columnIds": [
+            "2acc3490-307a-4c14-9b5a-bf0ab56e0995"
+          ],
+          "x": 401.102194921875,
+          "y": 608.0001,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "f61da7a9-2812-4258-b7ca-bf51a2fa6930",
+          "columnIds": [
+            "a452aa31-664e-4048-a135-267699762c40"
+          ],
+          "x": 403.4372078125,
+          "y": 483.1667,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_ingredient_to_beverage_ingredient",
+        "visible": true,
+        "id": "5794efaf-e1be-4618-9ef9-ee42f56a7799"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "4ad2bc97-6e54-459a-8f81-14ed2b2db58a",
+          "columnIds": [
+            "759b1cfc-d036-4e5c-b92a-1b60a148b419"
+          ],
+          "x": 757.5,
+          "y": 692.25,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "3989acfa-69d0-4933-872b-075dafc31f17",
+          "columnIds": [
+            "b0e41bf8-8503-4a35-b4d3-f16e220d30cd"
+          ],
+          "x": 614.70448984375,
+          "y": 693.7501,
+          "direction": "right"
+        },
+        "constraintName": "fk_provider_to_ingredient",
+        "visible": true,
+        "id": "468d7669-eb5a-407e-86e7-813faeec1e81"
+      },
+      {
+        "identification": false,
+        "relationshipType": "ZeroN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "338e9fc9-1159-4984-ad8e-a186cf51bbde",
+          "columnIds": [
+            "543c94fa-7f02-421c-bf40-e4936a76a13a"
+          ],
+          "x": 598.9228515625,
+          "y": 183.5,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "f7e6ada2-2f1b-40a3-bd4c-14d5f4f1be06",
+          "columnIds": [
+            "90608fdb-4087-46b8-9f27-2d292332df9b"
+          ],
+          "x": 734.25,
+          "y": 186,
+          "direction": "left"
+        },
+        "constraintName": "fk_beverage_to_beverage_order",
+        "visible": true,
+        "id": "82e46827-38f9-4451-b04a-116c530afeef"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "d609f126-9293-434b-be27-fa9a372ef8ef",
+          "columnIds": [
+            "e744ce6f-8a52-4c7a-86c5-6c81ca737d8b"
+          ],
+          "x": 1238.75,
+          "y": 187,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "f7e6ada2-2f1b-40a3-bd4c-14d5f4f1be06",
+          "columnIds": [
+            "c74976cf-f545-469d-b704-861f6439dd82"
+          ],
+          "x": 1103.0400390625,
+          "y": 186,
+          "direction": "right"
+        },
+        "constraintName": "fk_ordered_to_beverage_order",
+        "visible": true,
+        "id": "781baf3b-6b53-474c-a169-0057930bfb03"
+      }
+    ]
+  }
+}

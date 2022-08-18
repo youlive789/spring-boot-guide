@@ -38,9 +38,6 @@ public class Ingredient extends BaseEntity {
     @Column(nullable = false, length = 30)
     private String name;
 
-    @Column(nullable = false)
-    private Long price;
-
     @Column(nullable = false, length = 20)
     @Enumerated(EnumType.STRING)
     private IngredientType type;

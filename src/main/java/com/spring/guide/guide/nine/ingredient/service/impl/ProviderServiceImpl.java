@@ -14,8 +14,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ProviderServiceImpl implements ProviderService {
 
-    private final ProviderRepository providerRepository;
     private final ModelMapper modelMapper;
+    private final ProviderRepository providerRepository;
 
     @Override
     public ProviderDto createProvider(ProviderDto providerDto) {
@@ -33,14 +33,13 @@ public class ProviderServiceImpl implements ProviderService {
 
     @Override
     public ProviderDto selectProviderById(Long providerId) {
-        // TODO Auto-generated method stub
-        return null;
+        Provider found = providerRepository.findById(providerId).orElse(null);
+        return modelMapper.map(found, ProviderDto.class);
     }
 
     @Override
     public void removeProviderById(Long providerId) {
-        // TODO Auto-generated method stub
-        
+        providerRepository.deleteById(providerId);
     }
     
 }

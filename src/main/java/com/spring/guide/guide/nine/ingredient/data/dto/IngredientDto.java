@@ -16,7 +16,6 @@ import lombok.ToString;
 public class IngredientDto {
     private Long id;
     private String name;
-    private Long price;
     private IngredientType type;
     private Long pricePerGram;
 }

@@ -6,14 +6,13 @@ import static org.mockito.ArgumentMatchers.any;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.BDDMockito;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.ModelMapper;
 
@@ -95,16 +94,21 @@ public class ProviderServiceTests {
     @Test
     void selectProviderByIdTest() {
         Long providerId = 1L;
-        String providerOriginName = "tester";
+        String name = "tester";
 
-        ProviderDto providerDto = new ProviderDto(providerId, providerOriginName);
+        ProviderDto providerDto = new ProviderDto(providerId, name);
         Provider provider = Provider.builder()
             .id(providerId)
-            .name(providerOriginName)
+            .name(name)
             .createAt(Date.valueOf(LocalDate.now()))
             .updatedAt(Date.valueOf(LocalDate.now()))
             .build();
 
-        
+        BDDMockito.given(modelMapper.map(provider, ProviderDto.class)).willReturn(providerDto);
+        BDDMockito.given(providerRepository.findById(providerId)).willReturn(Optional.of(provider));
+        ProviderDto found = providerService.selectProviderById(providerId);
+
+        assertEquals(providerId, found.getId());
+        assertEquals(name, found.getName());
     }
 }

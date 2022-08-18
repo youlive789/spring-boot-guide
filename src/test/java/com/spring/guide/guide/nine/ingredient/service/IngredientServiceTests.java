@@ -95,7 +95,7 @@ public class IngredientServiceTests {
 
     @Test
     void updateIngredientTest() {
-        BDDMockito.given(modelMapper.map(ingredientDto, Ingredient.class)).willReturn(ingredient);
+        BDDMockito.given(ingredientRepository.findById(id)).willReturn(Optional.of(ingredient));
         BDDMockito.given(ingredientRepository.save(ingredient)).willReturn(ingredient);
         BDDMockito.given(modelMapper.map(ingredient, IngredientDto.class)).willReturn(ingredientDto);
 
